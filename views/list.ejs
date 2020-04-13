@@ -1,0 +1,34 @@
+<%- include("header") -%>
+    
+<div class="box" id="heading">
+
+    <h1><%= kindOfList %></h1>
+
+</div>
+<div class="box">
+    <% listSentByServer.foreach(function(array)){ %>
+        <div class="item">
+            <input type="checkbox">
+            <p> <%= listSentByServer.name  %></p>
+        </div>
+    <% } %>
+
+    
+    <form class="item" action="/" method="post" >
+        <input type="text" name="TD1" placeholder="Add New Item">
+        <button type="submit" name="list" value= <%= kindOfList %> >+</button>
+        <!-- <button type="submit" name="B2">Remove</button> -->
+    </form>
+</div>
+
+
+<%- include("footer") -%>
+
+
+    
+        
+        
+    
+
+   
+    
